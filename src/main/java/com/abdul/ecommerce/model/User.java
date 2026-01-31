@@ -1,20 +1,26 @@
 package com.abdul.ecommerce.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class User {
-	
+
 	private int id;
 	private String phone, name, email, password, role;
 	private LocalDateTime createdAt, updatedAt;
-	
-	public void changePassword() {}
-	
-	public void updateProfile() {}
-	
-	public User() {}
-	
-	public User(String name, String phone, String email, String password, String role, LocalDateTime createdAt, LocalDateTime updatedAt) {
+	private List<Order> orders;
+
+	public void changePassword() {
+	}
+
+	public void updateProfile() {
+	}
+
+	public User() {
+	}
+
+	public User(String name, String phone, String email, String password, String role, LocalDateTime createdAt,
+			LocalDateTime updatedAt) {
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
@@ -86,6 +92,14 @@ public class User {
 
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public List<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
 	}
 
 }
